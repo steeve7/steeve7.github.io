@@ -1,0 +1,30 @@
+
+<IfModule mod_rewrite.c>
+AddDefaultCharset UTF-8
+Header unset ETag
+FileETag None
+#ErrorDocument 404 http://raymondcollege.com.ng/404.php
+Options +FollowSymLinks -MultiViews
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /raymond/index.php [L]
+
+RewriteRule ^about about-us.php [NC,L,QSA]
+RewriteRule ^about/$ about-us.php [NC,L,QSA]
+
+RewriteRule ^blog blog.php [NC,L,QSA]
+RewriteRule ^blog/$ blog.php [NC,L,QSA]
+
+RewriteRule ^contact contact.php [NC,L,QSA]
+RewriteRule ^contact/$ contact.php [NC,L,QSA]
+
+RewriteRule ^login login.php [NC,L,QSA]
+RewriteRule ^login/$ login.php [NC,L,QSA]
+
+RewriteRule ^signup signup.php [NC,L,QSA]
+RewriteRule ^signup/$ signup.php [NC,L,QSA]
+
+
+</IfModule> 
+
